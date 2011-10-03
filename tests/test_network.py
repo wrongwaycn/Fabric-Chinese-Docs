@@ -8,7 +8,7 @@ import sys
 import paramiko
 from nose.tools import with_setup, ok_
 from fudge import (Fake, clear_calls, clear_expectations, patch_object, verify,
-    with_patched_object, patched_context, with_fakes)
+    patched_context, with_fakes)
 
 from fabric.context_managers import settings, hide, show
 from fabric.network import (HostConnectionCache, join_host_strings, normalize,
