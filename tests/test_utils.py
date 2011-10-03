@@ -14,7 +14,6 @@ from utils import mock_streams, aborts
 
 
 @mock_streams('stderr')
-@with_patched_object(output, 'warnings', True)
 def test_warn():
     """
     warn() should print 'Warning' plus given text
@@ -59,7 +58,6 @@ def test_abort():
 
 
 @mock_streams('stderr')
-@with_patched_object(output, 'aborts', True)
 def test_abort_message():
     """
     abort() should print 'Fatal error' plus exception value
