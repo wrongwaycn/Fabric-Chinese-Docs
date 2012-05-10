@@ -1,23 +1,17 @@
-中文化
-Fabric is a Python (2.5 or higher) library and command-line tool for
-streamlining the use of SSH for application deployment or systems
-administration tasks.
+Fabric是一个Python(2.5或更高版本)库和命令行工作，可以通过SSH简化应用部署和系统管理任务。
 
-It provides a basic suite of operations for executing local or remote shell
-commands (normally or via ``sudo``) and uploading/downloading files, as well as
-auxiliary functionality such as prompting the running user for input, or
-aborting execution.
+它提供了一组操作用于执行本地或运程命令行指令(普通指令或``sudo``)，上传或下载文件。
+还带有一些辅助功能，比如提示用户输入，中止程序运行等等。
  
-Typical use involves creating a Python module containing one or more functions,
-then executing them via the ``fab`` command-line tool. Below is a small but
-complete "fabfile" containing a single task::
+典型用法是创建一个包含一个或多个功能的Python模块，然后通过 ``fab`` 命令行工具运行该模块。
+下面用一个短小而完整的 "fabfile" 完成一项任务::
 
     from fabric.api import run
 
     def host_type():
         run('uname -s')
 
-Once a task is defined, it may be run on one or more servers, like so::
+定义任务之后，就可以运行在一个或多个服务器上，如下::
 
     $ fab -H localhost,linuxbox host_type
     [localhost] run: uname -s
@@ -29,6 +23,5 @@ Once a task is defined, it may be run on one or more servers, like so::
     Disconnecting from localhost... done.
     Disconnecting from linuxbox... done.
 
-In addition to use via the ``fab`` tool, Fabric's components may be imported
-into other Python code, providing a Pythonic interface to the SSH protocol
-suite at a higher level than that provided by e.g. the ``ssh`` library (which Fabric itself uses.)
+除了使用 ``fab`` 工具以外，Fabric的组件还可以在其他Python代码中引用，提供一个Pythonic的接口在更高层级上操作SSH协议。
+从而就不用直接使用 ``ssh`` 库。(当然，Fabric本身也要使用 ``ssh`` 库)

@@ -2,14 +2,14 @@
 Fabric
 ======
 
-About
-=====
+介绍
+====
 
 .. include:: ../README
 
 
-Installation
-============
+安装
+====
 
 Stable releases of Fabric are best installed via ``pip`` or ``easy_install``;
 or you may download TGZ or ZIP source archives from a couple of official
